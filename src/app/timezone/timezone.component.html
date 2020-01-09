@@ -8,28 +8,28 @@
 
     <li>Select & save time/timezone: <em>{{ inputTime }}</em>
       <div>
-        <form [formGroup]="eventFormGroup"
-              class="event-form example-form subheading relative">
-          <mat-form-field class="time-field m-b-2">
-            <mat-select placeholder="Time"
-                        required
-                        formControlName="timeField"
-                        [(value)]="selectedTime"
-                        (selectionChange)="change(); autopopulateDatetime();"
-              <mat-option class="mat-option-spacing"  *ngFor="let t of timetable" [value]="t">{{t}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+<!--        <form [formGroup]="eventFormGroup"-->
+<!--              class="event-form example-form subheading relative">-->
+<!--          <mat-form-field class="time-field m-b-2">-->
+<!--            <mat-select placeholder="Time"-->
+<!--                        required-->
+<!--                        formControlName="timeField"-->
+<!--                        [(value)]="selectedTime"-->
+<!--                        (selectionChange)="change(); autopopulateDatetime();"-->
+<!--              <mat-option class="mat-option-spacing"  *ngFor="let t of timetable" [value]="t">{{t}}</mat-option>-->
+<!--            </mat-select>-->
+<!--          </mat-form-field>-->
 
-          <mat-form-field class="time-zone-field m-b-2">
-            <mat-select placeholder="Time zone"
-                        required
-                        formControlName="timeZoneField"
-                        [(value)]="timeZone"
-                        (selectionChange)="change();"
-              <mat-option class="mat-option-spacing"  *ngFor="let z of timezoneList" [value]="z">{{z}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </form>
+<!--          <mat-form-field class="time-zone-field m-b-2">-->
+<!--            <mat-select placeholder="Time zone"-->
+<!--                        required-->
+<!--                        formControlName="timeZoneField"-->
+<!--                        [(value)]="timeZone"-->
+<!--                        (selectionChange)="change();"-->
+<!--              <mat-option class="mat-option-spacing"  *ngFor="let z of timezoneList" [value]="z">{{z}}</mat-option>-->
+<!--            </mat-select>-->
+<!--          </mat-form-field>-->
+<!--        </form>-->
       </div>
     </li>
 

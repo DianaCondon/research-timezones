@@ -9,6 +9,12 @@ import {
   Validators
 } from '@angular/forms';
 
+// import * as spacetime from 'spacetime';
+// import 'spacetime';
+// import * as _ from 'spacetime-informal';
+declare const spacetime: any;
+declare const informal: any;
+
 @Component({
   selector: 'app-timezone',
   templateUrl: './timezone.component.html',

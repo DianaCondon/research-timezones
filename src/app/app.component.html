@@ -4,6 +4,12 @@
   <h2>{{ subtitle }}</h2>
 </div>
 
+<ul>
+  <li *ngFor="let item of myText">
+    <p>{{item}}</p>
+  </li>
+</ul>
+
 <app-timezone></app-timezone>
 
 <router-outlet></router-outlet>
