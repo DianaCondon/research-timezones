@@ -1,0 +1,20 @@
+<div>
+  <h2>Things we are figuring out </h2>
+  <ul>
+    <li>
+      Get user's timezone: <em>{{ usersTimeZone }}</em>
+    </li>
+    <li>Display list of all timezones to choose from:</li>
+    <li>Select & save time/timezone: <em>{{ inputTime }}</em></li>
+    <li>
+      <p>Display event's time from any timezone, in user's timezone</p>
+      <p>Original Time: {{ eventTime }}, {{ eventTimeZone }}</p>
+      <p>Displayed Time: {{ displayedTime }}, {{displayedTimeZone}}</p>
+    </li>
+    <li>
+      <p>Calculate if a time in a timezone has passed, in user's timezone</p>
+      <p>Now: {{ nowTime }}, {{ nowTimeZone }}</p>
+      <p>Selected time has past: {{hasPassed}}</p>
+    </li>
+  </ul>
+</div>
