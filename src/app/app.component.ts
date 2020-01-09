@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'research-timezones';
+  title: String = 'Research Timezones';
+  subtitle: String = 'Looking into spacetime, IANA, and updating display string';
 }
