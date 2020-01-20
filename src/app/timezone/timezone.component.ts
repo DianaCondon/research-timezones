@@ -36,7 +36,6 @@ export class TimezoneComponent implements OnInit {
   eventSubmitted = false;
   hasPassed: Boolean;
 
-  // TODO: this is showing up blank, with error: "TypeError: Cannot read property 'displayedName' of undefined"
   usersTimeZone: TimezoneInfo;
 
   eventTime: Spacetime;
@@ -53,7 +52,6 @@ export class TimezoneComponent implements OnInit {
 
     this.nowTime = this.getUsersTime();
     this.usersTimeZone = this.getLocalTimeZone();
-    console.log(this.usersTimeZone);
 
     this.timezonesForm = new FormGroup({
       timezoneField: new FormControl(''),
@@ -63,8 +61,7 @@ export class TimezoneComponent implements OnInit {
       timeField: new FormControl(''),
       timeZoneField: new FormControl(''),
     });
-
-    // TODO: make choose timezoneInfo of timezonetable that contains users timezone
+    // Selects user's timezone in timezone dropdown
     this.timeZoneField.setValue(this.usersTimeZone);
   }
 
@@ -112,7 +109,6 @@ export class TimezoneComponent implements OnInit {
       }
     }
     timezones = this.sortTimezones(timezones);
-    console.log(timezones);
     return timezones;
   }
 
@@ -137,11 +133,6 @@ export class TimezoneComponent implements OnInit {
   getDisplayedName(standardName: string, offset: number): string {
     const stringOffset = this.convertOffset(offset);
     return stringOffset + ' ' + standardName;
-
-    // SHOW REPRESENTATIVE CITY
-    // const pickedIana = this.getPickedIana(standardName);
-    // const pickedCity = this.getCity(pickedIana);
-    // return stringOffset + ' ' + pickedCity;
   }
 
   // Takes in a timezone TimezoneInfo
@@ -254,14 +245,11 @@ export class TimezoneComponent implements OnInit {
   getLocalTimeZone(): TimezoneInfo {
     const s = spacetime.now();
     const usersIanaName = s.timezone().name;
-    // console.log(usersIanaName);
     let t: TimezoneInfo;
     this.timezonetable.forEach( function (zoneInfo) {
       zoneInfo.iana.forEach( function (ianaName) {
-        // console.log(ianaName);
         if (ianaName === usersIanaName) {
           t = zoneInfo;
-          console.log('halp');
         }
       });
     });
