@@ -7,12 +7,11 @@
     <br>
 
     <li>Display list of all timezones to choose from</li>
-      <form [formGroup]="timezonesForm">
-        <label>Timezones:</label>
-        <select class="custom-select" formControlName="timezoneField">
-          <option *ngFor="let timezone of timezonetable" [ngValue]="timezone">{{ timezone.displayedName }}</option>
-        </select>
-      </form>
+      <ul>
+        <li *ngFor="let timezone of timezonetable">
+          {{ timezone.displayedName}}
+        </li>
+      </ul>
     <br>
 
     <li>Select Event Time & Timezone:
